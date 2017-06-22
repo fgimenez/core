@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p /etc/systemd/system/snapd.service.d
+cat <<EOF > /etc/systemd/system/snapd.service.d/store.conf
+[Service]
+SNAPPY_USE_STAGING_STORE=1
+EOF
